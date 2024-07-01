@@ -8,7 +8,7 @@
     --main: linear-gradient(22deg, #ff758f, #c9184a);
     --main2: linear-gradient(22deg, #00b4d8, #0077b6);
     --main3: linear-gradient(22deg, #00b4d8, #00b4d8);
-    --bg: #f7e2f4;
+    --bg: #dd16bf;
     --main-hover: #CD2C6C;
     --h1: #000000;
     --h2: #333333;
@@ -21,12 +21,15 @@
     }
 
     :root {
-        --main: #59afe9;
-        --main-hover: #7798f2;
-        --bg: #373737;
-        --h1: #59afe9;
-        --h2: #c9beff;
-        --shadow: #00000011;
+        --main: linear-gradient(22deg, #c94b4b, #4b134f);
+        --main2: linear-gradient(22deg, #00b4d8, #0077b6);
+        --main3: linear-gradient(22deg, #00b4d8, #00b4d8);
+        --bg: linear-gradient(22deg, #0f2027, #203a43, #2c5364);
+        --main-hover: #CD2C6C;
+        --h1: #000000;
+        --h2: #333333;
+        --lbl: #ffffff;
+        --shadow: #00000022;
     }
 
     .icon {
@@ -49,29 +52,23 @@ body {
 }
 
 body {
-    background: var(--bg);
+    background: fixed #ffffff;
 }
 
 /* ---------------------------------------------------------------- FORM */
 
 form {
-    background-color: #b6b6b6;
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 20px 0px var(--shadow);
-    width: 60%;
+    background: fixed var(--bg);
+    padding: 3rem;
+    box-shadow: 0px -10px 20px var(--shadow) inset, 0px 20px 20px var(--shadow) inset;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .usersList {
-    background-color: #000000;
-    margin: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 20px 0px var(--shadow);
-    width: 60%;
+    padding: 3rem;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -91,17 +88,6 @@ form {
     display: flex;
     justify-content: center;
     padding: 4rem 0 4rem 0;
-}
-
-@media (max-width: 1340px) {
-    .container {
-        flex-wrap: wrap;
-    }
-
-    .calc-container,
-    .intro-container {
-        min-width: 100%;
-    }
 }
 
 .keybinds ul {
@@ -151,10 +137,21 @@ form {
     overflow: hidden;
 }
 
-.btn-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+.input-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+}
+
+@media (max-width: 1340px) {
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formInput {
+        width: 80%;
+    }
 }
 
 .numButtons {
@@ -172,20 +169,19 @@ form {
 /* ---------------------------------------------------------------- INPUT */
 
 .formInput {
-    border: none;
-    border-bottom: 4px solid var(--shadow);
+    border: 2px solid var(--shadow);
+    border-radius: 0.5rem;
     font-family: var(--fontText);
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 300;
+    padding: 0.75rem 1rem;
+    color: var(--lbl);
+    width: 80%;
+    margin: 0.5rem 0 1.5rem 0;
+    background: var(--shadow);
     transition: .1s ease-out;
-    padding: 10px;
-    border-radius: 5px;
-    color: var(--h2);
-    width: 100%;
-    height: 3rem;
-    margin-top: 12px;
-    margin-bottom: 24px;
-    background-color: var(--bg);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .formInput:hover,
@@ -199,7 +195,7 @@ form {
     border: none;
     cursor: pointer;
     border-radius: 15px;
-    background-color: var(--main);
+    background: var(--main);
     color: var(--bg);
     font-family: var(--fontTitle);
     font-size: 22px;
@@ -209,11 +205,12 @@ form {
     box-shadow: 0 3px var(--shadow);
     transition: .1s ease-out;
     text-decoration: none;
+    max-width: fit-content;
 }
 
 .btn:hover,
 .btn:active {
-    background-color: var(--main-hover);
+    background: var(--main-hover);
 }
 
 .btn:active {
@@ -247,7 +244,7 @@ form {
     font-weight: 400;
     text-align: center;
     line-height: 1.2rem;
-    color: var(--h1);
+    color: var(--lbl);
     transition: .1s ease-out;
 }
 
@@ -280,7 +277,7 @@ form {
 @keyframes press {
 
     0% {
-        transform:scale(0.99);
+        transform: scale(0.99);
     }
 
     100% {
@@ -312,11 +309,15 @@ form {
 
 @keyframes spin {
     0% {
-        transform: rotate3d(1, 0, 0, 0deg);
+        transform: scaleY(1);
+    }
+
+    25% {
+        transform: scaleY(0.1);
     }
 
     100% {
-        transform: rotate3d(1, 0, 0, 360deg);
+        transform: scaleY(1);
     }
 }
 

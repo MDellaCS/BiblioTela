@@ -4,14 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const inputs = document.getElementsByClassName('formInput');
 
-    Array.from(inputs).forEach(input => {
-        input.addEventListener('input', function () {
-            this.classList.add('press');
-            setTimeout(() => {
-                void this.offsetWidth;
-                this.classList.remove('press');
-            }, 100);
-        });
+    document.getElementById('teste').addEventListener('click', () => {
+        clearSpin();
     });
 
     function clearSpin() {
@@ -65,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const userElement = document.createElement('div');
                     userElement.textContent = `${user.name} | ${user.email}`;
                     userElement.classList.add('slide');
+                    userElement.classList.add('h2');
                     usersList.appendChild(userElement);
                 }, index * 100);
             });

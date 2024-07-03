@@ -24,12 +24,14 @@ public class BookController {
 
     @PostMapping("/register")
     public String registerBook(@RequestBody Book Book) {
-        Book newBook = BookService.registerBook(Book.getName(), Book.getEmail());
-        return "Book registered successfully: " + newBook.getName() + ", " + newBook.getEmail();
+        BookService.registerBook(Book.getTitulo(), Book.getAutores(), Book.getIsbn(), Book.getEditora(),
+                Book.getAnoPublicacao(), Book.getGenero(), Book.getSinopse());
+        return "Book registered successfully";
     }
 
-    @GetMapping("/all")
+    @GetMapping("/")
     public List<Book> getAllBooks() {
         return BookService.getAllBooks();
     }
 }
+

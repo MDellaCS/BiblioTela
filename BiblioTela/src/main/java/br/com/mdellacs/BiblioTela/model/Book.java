@@ -1,10 +1,14 @@
 package br.com.mdellacs.BiblioTela.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,10 +21,13 @@ public class Book {
     private Long id;
 
     private String titulo;
-    private String autor;
     private String isbn;
     private String editora;
     private String anoPublicacao;
     private String genero;
     private String sinopse;
+
+    @ManyToMany
+    @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private List<Author> autores;
 }

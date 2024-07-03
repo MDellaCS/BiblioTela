@@ -1,8 +1,8 @@
 package br.com.mdellacs.BiblioTela.controller;
 
 import br.com.mdellacs.BiblioTela.model.Author;
-import br.com.mdellacs.BiblioTela.model.Book;
 import br.com.mdellacs.BiblioTela.service.AuthorService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -24,8 +24,9 @@ public class AuthorController {
     }
 
     @PostMapping("/register")
-    public Author registerAuthor(@RequestParam String nome, @RequestBody List<Book> livros) {
-        return AuthorService.registerAuthor(nome, livros);
+    public String registerAuthor(@RequestBody Author Author) {
+        AuthorService.registerAuthor(Author.getNome(), Author.getLivros());
+        return "Author registered successfully";
     }
 
     @GetMapping("/")

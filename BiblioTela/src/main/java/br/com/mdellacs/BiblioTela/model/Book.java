@@ -1,5 +1,6 @@
 package br.com.mdellacs.BiblioTela.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -29,5 +30,5 @@ public class Book {
 
     @ManyToMany
     @JoinTable(name = "book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
-    private List<Author> autores;
+    private List<Author> autores = new ArrayList<>();;
 }

@@ -1,5 +1,6 @@
 package br.com.mdellacs.BiblioTela.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -22,5 +23,5 @@ public class Author {
     private String nome;
 
     @ManyToMany(mappedBy = "autores")
-    private List<Book> livros;
+    private List<Book> livros = new ArrayList<>();
 }

@@ -6,7 +6,7 @@
     --fontText: "Roboto";
 
     --main: linear-gradient(22deg, #ff758f, #c9184a);
-    --main2: linear-gradient(22deg, #00b4d8, #0077b6);
+    --main2: linear-gradient(22deg, #774936, #653a2a);
     --main3: linear-gradient(22deg, #00b4d8, #00b4d8);
     --bg: #dd16bf;
     --main-hover: #CD2C6C;
@@ -21,8 +21,8 @@
     }
 
     :root {
-        --main: linear-gradient(22deg, #c94b4b, #4b134f);
-        --main2: linear-gradient(22deg, #00b4d8, #0077b6);
+        --main: linear-gradient(22deg, #38160d, #411d13);
+        --main2: linear-gradient(22deg, #774936, #653a2a);
         --main3: linear-gradient(22deg, #00b4d8, #00b4d8);
         --bg: linear-gradient(22deg, #0f2027, #203a43, #2c5364);
         --main-hover: #CD2C6C;
@@ -54,6 +54,28 @@ body {
 
 body {
     background: fixed #ffffff;
+}
+
+/* ---------------------------------------------------------------- NAVBAR */
+
+.navbar {
+    display: grid;
+    grid-template-columns: 20% auto;
+    background: fixed var(--main2);
+    padding: 2rem;
+    width: 100%;
+}
+
+.navlogo {
+    border-right: solid 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navoptions {
+    width: 100%;
 }
 
 /* ---------------------------------------------------------------- FORM */
@@ -89,6 +111,14 @@ form {
     display: flex;
     justify-content: center;
     padding: 4rem 0 4rem 0;
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 80%;
+    max-height: 80%;
+    height: auto;
+    filter: invert();
 }
 
 .keybinds ul {

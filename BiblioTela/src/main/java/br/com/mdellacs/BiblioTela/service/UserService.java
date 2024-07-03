@@ -1,7 +1,7 @@
-package br.com.example.teste.service;
+package br.com.mdellacs.BiblioTela.service;
 
-import br.com.example.teste.model.User;
-import br.com.example.teste.repository.UserRepository;
+import br.com.mdellacs.BiblioTela.model.User;
+import br.com.mdellacs.BiblioTela.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

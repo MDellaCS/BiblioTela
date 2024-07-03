@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TesteApplication<teste>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.example.teste.TesteApplication",
+            "projectName": "teste",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BiblioTelaApplication<BiblioTela>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.mdellacs.BiblioTela.BiblioTelaApplication",
+            "projectName": "BiblioTela",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

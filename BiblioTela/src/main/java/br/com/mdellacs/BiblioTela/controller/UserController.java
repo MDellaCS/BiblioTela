@@ -1,7 +1,7 @@
-package br.com.example.teste.controller;
+package br.com.mdellacs.BiblioTela.controller;
 
-import br.com.example.teste.model.User;
-import br.com.example.teste.service.UserService;
+import br.com.mdellacs.BiblioTela.model.User;
+import br.com.mdellacs.BiblioTela.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

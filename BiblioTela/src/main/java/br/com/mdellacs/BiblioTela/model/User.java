@@ -1,4 +1,4 @@
-package br.com.example.teste.model;
+package br.com.mdellacs.BiblioTela.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

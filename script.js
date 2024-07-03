@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const inputs = document.getElementsByClassName('formInput');
 
-    document.getElementById('teste').addEventListener('click', () => {
-        clearSpin();
-    });
-
     function clearSpin() {
         Array.from(inputs).forEach(input => {
             input.classList.add('spin');
@@ -72,3 +68,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carrega os usuários quando a página é carregada
     loadUsers();
 });
+

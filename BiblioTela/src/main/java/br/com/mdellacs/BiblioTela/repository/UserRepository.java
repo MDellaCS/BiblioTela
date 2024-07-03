@@ -1,6 +1,6 @@
-package br.com.example.teste.repository;
+package br.com.mdellacs.BiblioTela.repository;
 
-import br.com.example.teste.model.User;
+import br.com.mdellacs.BiblioTela.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

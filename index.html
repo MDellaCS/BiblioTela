@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <script src="scriptLogin.js"></script>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <title>Login | BiblioTela</title>
@@ -15,26 +16,19 @@
 
     <div class="login slide">
 
-        <div class="center">
+        <p class="h1"><img class="logoSmall" src="images/logoSmallBT.png" /><br>Login</p>
 
-            <div class="h1">
-                <img class="logoSmall" src="images/logoSmallBT.png" /><br>
-                Login
-            </div>
-
-            <div>
-                <label for="txtUsuario" class="lbl">Usuário</label><br>
-                <input type="text" id="txtUsuario" class="formInput" required>
-            </div>
-
-            <div>
-                <label for="txtSenha" class="lbl">Senha</label><br>
-                <input type="password" id="txtSenha" class="formInput" required>
-            </div>
-
+        <div>
+            <label for="txtUsuario" class="lbl">Usuário</label><br>
+            <input type="text" id="txtUsuario" class="formInput" required>
         </div>
 
-        <button class="btn" type="submit">Entrar</button>
+        <div>
+            <label for="txtSenha" class="lbl">Senha</label><br>
+            <input type="password" id="txtSenha" class="formInput" required>
+        </div>
+
+        <button class="btn" onclick=login()>Entrar</button>
 
     </div>
 

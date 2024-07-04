@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BiblioTelaApplication",
+            "request": "launch",
+            "mainClass": "br.com.mdellacs.BiblioTela.BiblioTelaApplication",
+            "projectName": "teste"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-TesteApplication<teste>",
             "request": "launch",
             "cwd": "${workspaceFolder}",

@@ -8,28 +8,43 @@
     <script src="script.js"></script>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
-    <title>Frontend Teste</title>
+    <title>Login | BiblioTela</title>
 </head>
 
 <body>
 
-    <div class="navbar">
+    <div class="login slide">
 
-        <div class="navlogo">
+        <div class="center">
 
-            <img class="logo" src="images/logoBT.png"/>
+            <div class="h1">
+                <img class="logoSmall" src="images/logoBT.png" /><br>
+                Login
+            </div>
+
+            <div>
+                <label for="txtUsuario" class="lbl">Usuário</label><br>
+                <input type="text" id="txtUsuario" class="formInput" required>
+            </div>
+
+            <div>
+                <label for="txtSenha" class="lbl">Senha</label><br>
+                <input type="password" id="txtSenha" class="formInput" required>
+            </div>
 
         </div>
 
-        <div class="navoptions">
-
-            <p>Cadastrar Livro</p>
-            <p>Cadastrar Autor</p>
-
-        </div>
+        <button class="btn" type="submit">Entrar</button>
 
     </div>
 
+    <div id="footer" class="h2 footer">
+        Developed by Matheus Della
+        <br>
+        <a target="_blank" href="https://www.linkedin.com/in/matheus-della-crocce-santos-86ab60232/"><img class="icon"
+                src="./images/linkedin.svg"></a>
+        <a target="_blank" href="https://github.com/MDellaCS/"><img class="icon" src="./images/github.svg"></a>
+    </div>
 
 </body>
 

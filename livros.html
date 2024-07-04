@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    <script src="scriptLivros.js"></script>
 
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
     <title>Frontend Teste</title>
@@ -13,33 +14,60 @@
 
 <body>
 
-    <h1 class="h1">Frontend API</h1>
-    <form id="frmUser">
+    <div class="navbar">
+
+        <div class="navlogo">
+
+            <a href="index.html"><img class="logo" src="images/logoBT.png" /></a>
+
+        </div>
+
+        <div class="navoptions">
+
+            <a href="livros.html">Cadastrar Livro</a>
+            <a href="autores.html">Cadastrar Autor</a>
+
+        </div>
+
+    </div>
+
+    <h1 class="h1">LIVROS</h1>
+    <form id="frmBook">
 
         <div class="input-container">
             <div>
-                <label for="txtNome" class="lbl">Nome</label><br>
-                <input type="text" id="txtNome" class="formInput" required>
+                <label for="txtTitulo" class="lbl">Título</label><br>
+                <input type="text" id="txtTitulo" class="formInput" required>
             </div>
 
             <div>
-                <label for="txtEmail" class="lbl">Email</label><br>
-                <input type="email" id="txtEmail" class="formInput" required>
+                <label for="txtIsbn" class="lbl">ISBN</label><br>
+                <input type="text" id="txtIsbn" class="formInput" required>
             </div>
 
             <div>
-                <label for="txtEmail" class="lbl">Email</label><br>
-                <input type="email" id="txtEmail" class="formInput" required>
+                <label for="txtEditora" class="lbl">Editora</label><br>
+                <input type="text" id="txtEditora" class="formInput" required>
             </div>
 
             <div>
-                <label for="txtEmail" class="lbl">Email</label><br>
-                <input type="email" id="txtEmail" class="formInput" required>
+                <label for="txtAno" class="lbl">Ano de Publicação</label><br>
+                <input type="number" id="txtAno" class="formInput" required>
             </div>
 
             <div>
-                <label for="txtEmail" class="lbl">Email</label><br>
-                <input type="email" id="txtEmail" class="formInput" required>
+                <label for="txtGenero" class="lbl">Gênero Literário</label><br>
+                <input type="text" id="txtGenero" class="formInput" required>
+            </div>
+
+            <div>
+                <label for="txtAutor" class="lbl">Autor(es)</label><br>
+                <input type="text" id="txtAutor" class="formInput" required>
+            </div>
+
+            <div>
+                <label for="txtSinopse" class="lbl">Sinopse</label><br>
+                <textarea id="txtSinopse" class="formInput" rows="5" required></textarea>
             </div>
         </div>
 
@@ -74,6 +102,14 @@
             <td>matheus@hotmail.com</td>
         </tr>
     </table>
+
+    <div id="footer" class="h2 footer">
+        Developed by Matheus Della
+        <br>
+        <a target="_blank" href="https://www.linkedin.com/in/matheus-della-crocce-santos-86ab60232/"><img class="icon"
+                src="./images/linkedin.svg"></a>
+        <a target="_blank" href="https://github.com/MDellaCS/"><img class="icon" src="./images/github.svg"></a>
+    </div>
 
 </body>
 

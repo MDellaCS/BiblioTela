@@ -24,15 +24,15 @@
         --main: linear-gradient(22deg, #38160d, #411d13);
         --main2: linear-gradient(22deg, #774936, #653a2a);
         --main3: linear-gradient(22deg, #00b4d8, #00b4d8);
-        --bg: linear-gradient(22deg, #0f2027, #203a43, #2c5364);
-        --main-hover: #CD2C6C;
+        --bg: #ffe1d4;
+        --main-hover: linear-gradient(80deg, #642919, #b1634e);
         --h1: #000000;
         --h2: #333333;
         --lbl: #ffffff;
         --shadow: #00000022;
     }
 
-    .icon {
+    .logoa {
         filter: invert(100%);
     }
 }
@@ -49,11 +49,11 @@
 html,
 body {
     overflow-x: hidden;
-    padding-bottom: 200px;
 }
 
 body {
-    background: fixed #ffffff;
+    background: fixed var(--bg);
+    padding-bottom: 200px;
 }
 
 /* ---------------------------------------------------------------- NAVBAR */
@@ -61,7 +61,7 @@ body {
 .navbar {
     display: grid;
     grid-template-columns: 20% auto;
-    background: fixed var(--main2);
+    background: fixed var(--main);
     padding: 2rem;
     width: 100%;
 }
@@ -76,15 +76,55 @@ body {
 
 .navoptions {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navoptions a {
+    font-family: var(--fontTitle);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.2rem;
+    color: var(--lbl);
+    transition: .1s ease-out;
+    margin-left: 3rem;
+    text-decoration: none;
+}
+
+.navoptions a:hover {
+    text-decoration: underline;
 }
 
 /* ---------------------------------------------------------------- FORM */
 
 form {
-    background: fixed var(--bg);
+    background: fixed var(--main2);
     padding: 3rem;
     box-shadow: 0px -10px 20px var(--shadow) inset, 0px 20px 20px var(--shadow) inset;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.login {
+    transition: .1s ease-out;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    box-shadow: 4px 4px 10px black;
+}
+
+.login .formInput {
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -115,10 +155,15 @@ form {
 
 .logo {
     cursor: pointer;
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 12rem;
+    max-height: 12rem;
     height: auto;
-    filter: invert();
+}
+
+.logoSmall {
+    max-width: 6rem;
+    max-height: 6rem;
+    height: auto;
 }
 
 .keybinds ul {
@@ -220,35 +265,46 @@ form {
     background-color: var(--shadow);
 }
 
+textarea {
+    resize: none;
+}
+
 /* ---------------------------------------------------------------- BUTTON */
 
-.btn {
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-    background: var(--main);
-    color: var(--bg);
-    font-family: var(--fontTitle);
-    font-size: 22px;
-    font-weight: 500;
-    padding: 5px 15px 5px 15px;
-    margin: 5px;
-    box-shadow: 0 3px var(--shadow);
-    transition: .1s ease-out;
+a {
     text-decoration: none;
+    color: initial;
+}
+
+.btn {
+    border: solid 0.15em #38160d;
+    cursor: pointer;
+    color: #38160d;
+    background: var(--bg);
+    font-family: var(--fontTitle);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 0.2em;
+    padding: 0.3em 0.8em;
+    margin: 0.25em;
+    box-shadow: 0 3px black;
+    transition: .1s ease-out;
     max-width: fit-content;
 }
 
 .btn:hover,
 .btn:active {
-    background: var(--main-hover);
+    background: #38160d;
+    color: white;
 }
 
 .btn:active {
-    box-shadow: 0 1px var(--shadow);
+    box-shadow: 0 1px #38160d;
     transform: translateY(2px);
     transition: 0s;
 }
+
+/* ---------------------------------------------------------------- FONT */
 
 .h1 {
     font-family: var(--fontTitle);
@@ -324,7 +380,7 @@ form {
 @keyframes slide {
     0% {
         opacity: 0;
-        transform: translateX(-200px);
+        transform: translateX(-100px);
     }
 
     100% {
@@ -335,7 +391,7 @@ form {
 
 .slide {
     animation-name: slide;
-    animation-duration: .5s;
+    animation-duration: .7s;
 }
 
 @keyframes spin {

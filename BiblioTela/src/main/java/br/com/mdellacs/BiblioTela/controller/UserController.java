@@ -24,11 +24,21 @@ public class UserController {
 
     @PostMapping("/register")
     public String registerUser(@RequestBody User user) {
-        User newUser = userService.registerUser(user.getName(), user.getEmail());
-        return "User registered successfully: " + newUser.getName() + ", " + newUser.getEmail();
+        User newUser = userService.registerUser(user.getUsername(), user.getPassword());
+        return "User registered successfully: " + newUser.getUsername() + ", " + newUser.getPassword();
     }
 
-    @GetMapping("/all")
+    @PostMapping("/login")
+    public String loginUser(@RequestBody User user) {
+        boolean authenticatedUser = userService.loginUser(user.getUsername(), user.getPassword());
+        if (authenticatedUser == true) {
+            return "";
+        } else {
+            return "ERRO";
+        }
+    }
+
+    @GetMapping("/")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }

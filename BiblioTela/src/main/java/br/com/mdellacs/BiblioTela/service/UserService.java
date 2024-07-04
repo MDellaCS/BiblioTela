@@ -15,11 +15,19 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User registerUser(String name, String email) {
+    public User registerUser(String username, String password) {
         User newUser = new User();
-        newUser.setName(name);
-        newUser.setEmail(email);
+        newUser.setUsername(username);
+        newUser.setPassword(password);
         return userRepository.save(newUser);
+    }
+
+    public boolean loginUser(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user != null && user.getPassword().equals(password)) {
+            return true;
+        }
+        return false;
     }
 
     public List<User> getAllUsers() {
